@@ -19,7 +19,7 @@ export default function AboutSection() {
         <Wrapper>
             <motion.section
                 id="about"
-                className="scroll-mt-28 bg-black/20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center border border-white/10 p-8 md:p-12 rounded-2xl"
+                className="scroll-mt-28 bg-black/20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center border border-white/10 p-6 md:p-12 rounded-2xl"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -62,11 +62,11 @@ export default function AboutSection() {
                         Every frame Tells a Story
                     </h2>
 
-                    <p className="text-muted text-base leading-loose mb-4">
+                    <p className="text-muted text-base text-justify leading-loose mb-4">
                         I’m Richa, a video editor helping entrepreneurs turn their message into videos people can’t ignore.
                     </p>
 
-                    <p className="text-muted text-base leading-loose">
+                    <p className="text-muted text-justify text-base leading-loose">
                         I create high-quality, story-driven edits that don’t just look good, they build trust, authority, and engagement, so your audience connects with you on a deeper level. Let’s craft content that stops the scroll, sparks emotion, and positions you as the go-to in your industry.
                     </p>
                     <div className="border-t border-white/10 pt-6 mt-6">

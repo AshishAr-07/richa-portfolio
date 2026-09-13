@@ -49,7 +49,7 @@ export default function Cta() {
             </Link>
             <Link
               href="#work"
-              className="text-sm font-medium text-white/55 transition-colors hover:text-white"
+              className="text-sm font-medium px-5 sm:px-0 text-white/55 transition-colors hover:text-white"
             >
               See my work
             </Link>

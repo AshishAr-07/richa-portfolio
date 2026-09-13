@@ -1,15 +1,8 @@
 import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
-import { RiTwitterXLine } from "react-icons/ri";
 
-const SOCIALS = ["YT", "IG", "LI"];
 
 const Footer = () => (
     <footer className="bg-surface border-t border-white/8 px-8 md:px-16 py-6 flex flex-wrap items-center justify-between gap-6">
-        {/* Logo */}
-        <p className="font-bold text-cream text-base m-0">
-            Richa (Video Editor)
-        </p>
 
         {/* Copyright */}
         <p className="text-muted text-sm tracking-wide m-0">
