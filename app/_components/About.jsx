@@ -8,10 +8,10 @@ import { HiOutlineMail } from "react-icons/hi";
 import Wrapper from "./Wrapper";
 
 const socials = [
-    { label: "YouTube", href: "https://www.youtube.com/@Richayadavofficial28", icon: FaYoutube },
+    // { label: "YouTube", href: "https://www.youtube.com/@Richayadavofficial28", icon: FaYoutube },
     // { label: "Instagram", href: "https://instagram.com/yourhandle", icon: FaInstagram },
-    { label: "X", href: "https://x.com/RichaEdits", icon: FaXTwitter },
-    { label: "Email", href: "mailto:richayadavofficial28@gmail.com", icon: HiOutlineMail },
+    { label: "DM on", href: "https://x.com/RichaEdits", icon: FaXTwitter, external: true },
+    { label: "Mail me", href: "mailto:richayadavofficial28@gmail.com", icon: HiOutlineMail, external: false },
 ];
 
 export default function AboutSection() {
@@ -70,8 +70,8 @@ export default function AboutSection() {
                         I create high-quality, story-driven edits that don’t just look good, they build trust, authority, and engagement, so your audience connects with you on a deeper level. Let’s craft content that stops the scroll, sparks emotion, and positions you as the go-to in your industry.
                     </p>
                     <div className="border-t border-white/10 pt-6 mt-6">
-                        <div className="flex gap-3">
-                            {socials.map(({ label, href, icon: Icon }, index) => (
+                        <div className="flex flex-wrap gap-3">
+                            {socials.map(({ label, href, icon: Icon, external }, index) => (
                                 <motion.div
                                     key={label}
                                     variants={{
@@ -82,12 +82,13 @@ export default function AboutSection() {
                                 >
                                     <Link
                                         href={href}
-                                        target={label !== "Email" ? "_blank" : undefined}
-                                        rel={label !== "Email" ? "noopener noreferrer" : undefined}
+                                        target={external ? "_blank" : undefined}
+                                        rel={external ? "noopener noreferrer" : undefined}
                                         aria-label={label}
-                                        className="group relative block rounded-xl bg-white/5 p-3 text-white/70 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-(--color) hover:text-white hover:ring-(--color)/50 hover:shadow-lg hover:shadow-(--color)/25"
-                                    >
+                                        className="group relative inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-3 text-sm font-medium text-white/70 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-(--color) hover:text-white hover:ring-(--color)/50 hover:shadow-lg hover:shadow-(--color)/25"
+                                    > <span className="hidden md:block">{label}</span>
                                         <Icon size={18} className="transition-transform duration-300 group-hover:scale-110" />
+                                       
                                     </Link>
                                 </motion.div>
                             ))}

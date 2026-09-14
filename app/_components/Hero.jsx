@@ -42,7 +42,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="#about"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white/55 transition-colors hover:text-white"
+                className="inline-flex items-center px-5 sm:px-0 gap-2 text-sm font-medium text-white/55 transition-colors hover:text-white"
               >
                 More about me
                 <ArrowDownRight size={16} />
